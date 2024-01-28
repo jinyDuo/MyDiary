@@ -8,11 +8,11 @@
    <li>회원로직에서 JWT 사용방법</li>
    <li>React 렌더링 최적화 설명</li>
    <li>Mutable / immutable 설명</li>
-   <li>SPA 장.단점설명</li>
-   <li>Local Storage 와 cookie 개념 설명 및 적용했던경험 설명</li>
-   <li>CSR 과 SSR 개념 및 방식설명</li>
-   <li>ENV config 설정했던 내용설명</li>
-   <li>단방향 / 양방향 바인딩 차이</li>
+   <li>SPA 장.단점설명</li>
+   <li>Local Storage 와 cookie 개념 설명 및 적용했던경험 설명</li>
+   <li>CSR 과 SSR 개념 및 방식설명</li>
+   <li>ENV config 설정했던 내용설명</li>
+   <li>단방향 / 양방향 바인딩 차이</li>
    <li>싱글톤 패턴과 Redux 패턴 유사한점 설명</li>
    <li>React에서 대입연산 과 불변성에대한 연관성 설명</li>
  </ul>
@@ -24,8 +24,8 @@
    <li>ORM 이란?</li>
   <li>트랙젝션 설명 및 적용했던 경험설명</li>
   <li>리눅스권한 775 / 755 권한 설명</li>
-  <li>API 테스트 방법 설명</li>
-  <li>서버 대용량 트래픽 처리방식설명</li>
+  <li>API 테스트 방법 설명</li>
+  <li>서버 대용량 트래픽 처리방식설명</li>
  </ul>
 </p>
 <p>
