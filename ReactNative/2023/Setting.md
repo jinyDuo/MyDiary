@@ -1,1 +1,0 @@
-참고 블로그 : [https://armontad-1202.tistory.com/entry/맥에서-자바-설치경로-확인하기](https://armontad-1202.tistory.com/entry/%EB%A7%A5%EC%97%90%EC%84%9C-%EC%9E%90%EB%B0%94-%EC%84%A4%EC%B9%98%EA%B2%BD%EB%A1%9C-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0)
