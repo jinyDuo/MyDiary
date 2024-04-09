@@ -95,5 +95,6 @@
               <category android:name="android.intent.category.DEFAULT" />
               <category android:name="android.intent.category.BROWSABLE" />
               <data android:scheme="externalapp" />
-        - 해당 외부앱 실행 intent 와 MAIN intent 부분이 같이 코드에 포함되어
+        - 해당 외부앱 실행 intent 와 MAIN intent 부분이 같이 코드에 포함되어있으면 메인액티비티 실행이 되지않아 앱이 열리지않음
+        - intent Main 액티비티와 분리해두어야함.
 </p>
