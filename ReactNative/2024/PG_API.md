@@ -81,3 +81,38 @@
       </activity>
     </application>
 </manifest>
+
+<p>
+    const onShouldStartLoadWithRequest = event => {
+    // 외부 앱의 URL이거나 마켓 플레이스 URL이면 처리
+    if (event.url.startsWith('http') || event.url.startsWith('https')) {
+      Linking.openURL(event.url); // 외부 웹페이지 열기
+    } else if (Platform.OS === 'android' && event.url.startsWith('intent')) {
+      SendIntentAndroid.openAppWithUri(event.url)
+        .then(isOpened => {
+          if (!isOpened) {
+            ToastAndroid.show(
+              '앱 실행에 실패했습니다. 앱을 설치 후 다시 이용해주세요.',
+              ToastAndroid.SHORT,
+            );
+          }
+          return false;
+        })
+        .catch(err => {
+          console.log(err);
+        });
+      return false;
+    } else {
+      console.log('마켓플레이스?');
+      // 마켓 플레이스로 이동
+      Linking.openURL(
+        `market://details?id=${
+          Platform.OS === 'android' ? 'yourAppPackage' : 'yourAppPackage'
+        }`,
+      );
+      return false;
+    }
+
+    return true;
+  };
+</p>
