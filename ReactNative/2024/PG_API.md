@@ -83,36 +83,17 @@
 </manifest>
 
 <p>
-    const onShouldStartLoadWithRequest = event => {
-    // 외부 앱의 URL이거나 마켓 플레이스 URL이면 처리
-    if (event.url.startsWith('http') || event.url.startsWith('https')) {
-      Linking.openURL(event.url); // 외부 웹페이지 열기
-    } else if (Platform.OS === 'android' && event.url.startsWith('intent')) {
-      SendIntentAndroid.openAppWithUri(event.url)
-        .then(isOpened => {
-          if (!isOpened) {
-            ToastAndroid.show(
-              '앱 실행에 실패했습니다. 앱을 설치 후 다시 이용해주세요.',
-              ToastAndroid.SHORT,
-            );
-          }
-          return false;
-        })
-        .catch(err => {
-          console.log(err);
-        });
-      return false;
-    } else {
-      console.log('마켓플레이스?');
-      // 마켓 플레이스로 이동
-      Linking.openURL(
-        `market://details?id=${
-          Platform.OS === 'android' ? 'yourAppPackage' : 'yourAppPackage'
-        }`,
-      );
-      return false;
-    }
+    1. 외부앱 app_scheme 을 설정한다 (안드로이드, iOS 동일함)
+    2. 웹뷰에서 외부앱 실행시 해당 링크에서 앱이없으면 앱 store로 이동시키고 앱이있으면 해당앱을 실행시킴
+    3.
+</p>
 
-    return true;
-  };
+<p>
+    1. 버그사항
+        - 안드로이드 intent-filter 설정에서 해당
+              <action android:name="android.intent.action.VIEW" />
+              <category android:name="android.intent.category.DEFAULT" />
+              <category android:name="android.intent.category.BROWSABLE" />
+              <data android:scheme="externalapp" />
+        - 해당 외부앱 실행 intent 와 MAIN intent 부분이 같이 코드에 포함되어
 </p>
